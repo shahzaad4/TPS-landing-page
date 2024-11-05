@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPS Kids</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+ 
+
+  
+  
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header Section -->
+  <header class="bg-purple-300 shadow-md fixed w-full z-10">
+    <div id="hed" class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo Section -->
+        <a href="/" class="flex items-center">
+            <img src="/images/logo_no_bg.png" 
+                 alt="TPS Kids Logo" 
+                 class="h-12 md:h-16 lg:h-20 w-auto object-contain">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex space-x-6">
+            <a href="#curriculum" class="text-gray-700 hover:text-blue-500">Curriculum</a>
+            <a href="#staff" class="text-gray-700 hover:text-blue-500">Staff</a>
+            <a href="#activities" class="text-gray-700 hover:text-blue-500">Activities</a>
+            <a href="#programs" class="text-gray-700 hover:text-blue-500">Programs</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 6h14M3 10h14M3 14h14" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="md:hidden bg-purple-300 px-6 py-4 space-y-4 hidden">
+        <a href="#curriculum" class="block text-gray-700 hover:text-blue-500">Curriculum</a>
+        <a href="#staff" class="block text-gray-700 hover:text-blue-500">Staff</a>
+        <a href="#activities" class="block text-gray-700 hover:text-blue-500">Activities</a>
+        <a href="#programs" class="block text-gray-700 hover:text-blue-500">Programs</a>
+    </div>
+</header>
+<script>
+  document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative h-screen">
+    <!-- Background Image with Blur Effect -->
+    <div class="absolute inset-0 bg-cover bg-center blur-md" 
+         style="background-image: url('./images/entrance.jpg');"></div>
+  
+    <!-- Content Overlay -->
+    <div class="absolute inset-0 bg-blue-600 bg-opacity-50 flex items-center justify-center">
+      <div class="text-center text-white px-4">
+        <h1 class="text-5xl font-bold mb-4">Nurturing Young Minds for a Bright Future</h1>
+        <p class="text-lg mb-6">Join us to unlock your child’s potential in a joyful and safe environment.</p>
+            <a href="#book-tour" class="bg-white text-blue-600 px-8 py-3 rounded-md text-lg font-semibold hover:bg-gray-100">
+                Book a Tour
+              </a>
+        
+      </div>
+    </div>
+  </section>
+  <section id="our-programs" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8">Our Programs</h2>
+        
+        <!-- Cards Container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Play Group Card -->
+            <a href="#play-group" class="group block bg-white rounded-lg shadow-lg p-6 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out transform hover:-translate-y-2">
+                <h3 class="text-xl font-semibold text-purple-600 group-hover:text-white mb-4">Play Group</h3>
+                <p class="text-gray-600 group-hover:text-white">An engaging environment where toddlers explore, socialize, and learn through play.</p>
+            </a>
+            
+            <!-- Nursery Card -->
+            <a href="#nursery" class="group block bg-white rounded-lg shadow-lg p-6 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out transform hover:-translate-y-2">
+                <h3 class="text-xl font-semibold text-purple-600 group-hover:text-white mb-4">Nursery</h3>
+                <p class="text-gray-600 group-hover:text-white">Focused on foundational skills, preparing kids for structured learning in a fun way.</p>
+            </a>
+            
+            <!-- Lower KG Card -->
+            <a href="#lower-kg" class="group block bg-white rounded-lg shadow-lg p-6 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out transform hover:-translate-y-2">
+                <h3 class="text-xl font-semibold text-purple-600 group-hover:text-white mb-4">Lower KG</h3>
+                <p class="text-gray-600 group-hover:text-white">Introducing basic academic concepts, fostering curiosity and early development.</p>
+            </a>
+            
+            <!-- Upper KG Card -->
+            <a href="#upper-kg" class="group block bg-white rounded-lg shadow-lg p-6 hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out transform hover:-translate-y-2">
+                <h3 class="text-xl font-semibold text-purple-600 group-hover:text-white mb-4">Upper KG</h3>
+                <p class="text-gray-600 group-hover:text-white">Building readiness for primary school with emphasis on cognitive and social skills.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+  <section id="about-us" class="bg-gray-100 py-10" style="background-image: url('images/pencil.jpg');">
+    
+    <div id="aboutus"class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="box bg-yellow-400 bg-opacity-90 rounded-lg shadow-lg p-6">
+                <h1 class="text-2xl font-bold text-gray-600 mb-4">Always Perfect Ratio</h1>
+                <p class="text-white">Devoting personal attention is our prime objective so the staff to student ratio is perfectly regulated with the right balance.</p>
+            </div>
+            <div class="box bg-green-400 bg-opacity-90 rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-600 mb-2">Unique Curriculum</h2>
+                <p class="text-white">We have designed an exclusive curriculum that focuses more on the development of the little ones than just academic rigmarole.</p>
+            </div>
+            <div class="box bg-blue-400 bg-opacity-90 rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-600 mb-2">Churning Curiosity</h2>
+                <p class="text-white">Our staff creates a congenial environment churning the creativity of the little minds through constant interaction.</p>
+            </div>
+            <div class="box bg-purple-400 bg-opacity-90 rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-600 mb-2">Experienced Staff</h2>
+                <p class="text-white">Our teachers are trained, experienced, and passionate about early childhood education. They ensure each child receives personalized attention and care.</p>
+            </div>
+            <div class="box bg-violet-400 bg-opacity-90 rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-600 mb-2">Discipline Of Joy</h2>
+                <p class="text-white">We specialize in handling the unforeseen situation with kids with the most amiable approach. Our discipline policy is embedded with positivity and fun.</p>
+            </div>
+            <div class="box bg-red-400 bg-opacity-90 rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-600 mb-2">Global Safe Surroundings</h2>
+                <p class="text-white">Health and hygiene are an utmost priority at TPS kids and our infrastructure is built on strong foundation of cleanliness throughout the premises.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonials Section -->
+<!-- Testimonials Section -->
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-16 bg-purple-200">
+  <div class="container mx-auto px-6 text-center bg-purple-200">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">What Parents Say</h2>
+
+      <!-- Responsive Grid for Testimonial Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Testimonial Card 1 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl">
+              <p class="text-gray-700 mb-4">"Our daughter has shown great learning progress at TPS. The nurturing staff ensures she feels happy and safe. Principal is giving personal attention to each and every child. The school principal's unwavering guidance, care, and support has always made us feel that our child is protected and nurtured."</p>
+              <h3 class="font-semibold text-purple-600">Sarah Imran925</h3>
+              <p class="text-yellow-500">Rating: ★★★★★</p>
+          </div>
+
+          <!-- Testimonial Card 2 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl">
+              <p class="text-gray-700 mb-4">"My son had a great improvement after joining TPS kids school. I appreciate the faculty for my son's development. I thank principal mam for encouraging us as well as my son."</p>
+              <h3 class="font-semibold text-purple-600">Yasmeen Sayed</h3>
+              <p class="text-yellow-500">Rating: ★★★★☆</p>
+          </div>
+
+          <!-- Testimonial Card 3 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl">
+              <p class="text-gray-700 mb-4">"Great Play School with good atmosphere that gives the kids confidence and discipline. The quality of education is fantastic. The classrooms are well maintained, clean and spacious, and the play areas include the ball pool and slides where kids love to be."</p>
+              <h3 class="font-semibold text-purple-600">Sunanda Maranolla</h3>
+              <p class="text-yellow-500">Rating: ★★★★★</p>
+          </div>
+
+          <!-- Additional Testimonial Card 4 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl">
+              <p class="text-gray-700 mb-4">"Thank you TPS Kids for supporting us, encouraging our children, and making them enjoy. Classes are very good, especially thanks to Rumana ma'am for making learning fun!"</p>
+              <h3 class="font-semibold text-purple-600">Syed Mazhar</h3>
+              <p class="text-yellow-500">Rating: ★★★★★</p>
+          </div>
+
+          <!-- Additional Testimonial Card 5 -->
+          <div class="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl">
+              <p class="text-gray-700 mb-4">"Good evening! I just wanted to express my heartfelt appreciation for our nursery class teacher's exceptional teaching methods. I've seen tremendous growth and improvement in my child's learning and retention abilities. Special thanks to daycare teacher Anjani madam who cares for my kids as if at home."</p>
+              <h3 class="font-semibold text-purple-600">Naazneen Naaz</h3>
+              <p class="text-yellow-500">Rating: ★★★★★</p>
+          </div>
+
+          <!-- Additional cards can be added similarly -->
+      </div>
+  </div>
+</section>
+
+<script>
+  var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,              // 1 slide on small screens
+      spaceBetween: 20,              // Space between slides
+      loop: true,                    // Infinite loop mode
+      pagination: {                  // Pagination dots
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+      navigation: {                  // Navigation arrows
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {                 // Responsive settings
+          640: {                     // >= 640px
+              slidesPerView: 1,
+          },
+          768: {                     // >= 768px
+              slidesPerView: 2,
+          },
+          1024: {                    // >= 1024px
+              slidesPerView: 3,
+          },
+      },
+  });
+</script>
+
+<!-- Embedded Google Maps Section -->
+<section id="location" class="py-16">
+  <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">Our Location</h2>
+      <div class="relative overflow-hidden rounded-lg shadow-lg" style="padding-top: 56.25%">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6419746256473!2d78.4018946!3d17.3617987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97ae636714f1%3A0x7b00ac1bc6f2dc8f!2sTPS%20KIDS%20-%20Play%20school!5e0!3m2!1sen!2sin!4v1663917288956!5m2!1sen!2sin"
+                  class="absolute top-0 left-0 w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer class="bg-gray-800 text-gray-300 py-8">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-start">
+      
+      <!-- Left Section: Contact Info -->
+      <div class="mb-6 md:mb-0">
+          <h4 class="text-lg font-semibold text-gray-100 mb-4">Contact Us</h4>
+          <p class="text-gray-400">
+              TPS Kids Play School<br>
+              P&T Colony, Sun City, Bandlaguda Jagir, Telangana 500086<br>
+              Hyderabad, India<br>
+              Phone: 07702232345<br>
+              Email: contact@tpskids.com
+          </p>
+      </div>
+      
+      <!-- Right Section: Social Media Links -->
+      <div class="flex flex-col items-start md:items-end">
+          <h4 class="text-lg font-semibold text-gray-100 mb-4">Follow Us</h4>
+          <div class="flex space-x-4">
+              <!-- Social Media Icons (you can replace "#" with the actual links) -->
+              <a href="https://www.instagram.com/tps.kids/" class="text-gray-400 hover:text-gray-100 transition duration-200">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M22 12.072C22 6.473 17.523 2 12.072 2 6.472 2 2 6.473 2 12.072c0 5.023 3.656 9.183 8.438 10.06v-7.112H7.898v-2.948h2.54V9.657c0-2.506 1.493-3.887 3.776-3.887 1.094 0 2.237.196 2.237.196v2.46h-1.26c-1.244 0-1.632.771-1.632 1.56v1.89h2.781l-.444 2.948h-2.337V22.13C18.342 21.255 22 17.095 22 12.072z" />
+                  </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-100 transition duration-200">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M24 4.557a9.94 9.94 0 01-2.828.775 4.958 4.958 0 002.165-2.724c-.95.555-2.004.959-3.127 1.177a4.926 4.926 0 00-8.384 4.482c-4.093-.205-7.72-2.165-10.148-5.144A4.822 4.822 0 001.67 6.57a4.92 4.92 0 002.188-.604 4.92 4.92 0 003.94 1.07 4.914 4.914 0 01-2.22-.616v.061a4.917 4.917 0 003.946 4.824 4.903 4.903 0 01-2.212.084 4.919 4.919 0 004.588 3.42 9.874 9.874 0 01-6.102 2.104c-.398 0-.79-.023-1.174-.067a13.992 13.992 0 007.548 2.209c9.05 0 14.002-7.496 14.002-13.986 0-.213-.005-.425-.014-.636A9.935 9.935 0 0024 4.557z" />
+                  </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-100 transition duration-200">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 2.163C6.477 2.163 2 6.64 2 12.163 2 17.183 5.656 21.16 10.438 22.06v-7.113h-2.54v-2.948h2.54V9.657c0-2.507 1.493-3.888 3.776-3.888 1.094 0 2.237.197 2.237.197v2.46h-1.26c-1.244 0-1.632.77-1.632 1.56v1.89h2.781l-.444 2.948h-2.337v7.113C18.342 21.16 22 17.183 22 12.163 22 6.64 17.523 2.163 12 2.163z" />
+                  </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-gray-100 transition duration-200">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M22.672 0H1.328C.593 0 0 .592 0 1.328v21.344C0 23.406.593 24 1.328 24h21.344C23.406 24 24 23.406 24 22.672V1.328C24 .593 23.406 0 22.672 0zM7.27 19.751H3.655V9.243H7.27v10.508zm-1.81-12.31h-.03C4.167 7.44 3.656 6.926 3.656 6.27s.51-1.17 1.31-1.17c.798 0 1.309.511 1.341 1.168 0 .658-.512 1.171-1.341 1.171zm13.689 12.31h-3.613v-5.644c0-1.345-.481-2.264-1.687-2.264-1.178 0-1.68.789-1.964 1.55-.113.275-.141.656-.141 1.039v5.319h-3.613V9.243h3.478v1.438h.048c.484-.721 1.347-1.753 3.248-1.753 2.377 0 4.154 1.553 4.154 4.887v6.936z" />
+                  </svg>
+              </a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+  <section>
+    <div class="container ">
+    </div>
+  </section>
+
+</body>
+</html>
